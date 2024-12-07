@@ -15,4 +15,13 @@ jobs:
       with:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
-  
+    ##Executando o comando Docker Build
+    - name: Build da Image Docker    
+      uses: docker/build-push-action@v6.10.0
+      with:
+        context: ./src
+        file: ./src/Dockerfile
+        push: true
+        tags: |
+        marcelopaglione/aula-primeir-pipeline:v${{ github.run_number }}
+        marcelopaglione/aula-primeir-pipeline:latest
