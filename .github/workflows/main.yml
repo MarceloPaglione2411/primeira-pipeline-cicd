@@ -9,6 +9,7 @@ jobs:
     steps:
     - name: Obtendo o código
       uses: actions/checkout@v4.1.5
+    ##Criação do login no Docker
     - name: Autenticação no Docker Hub
       uses: docker/login-action@v3.3.0
       with:
