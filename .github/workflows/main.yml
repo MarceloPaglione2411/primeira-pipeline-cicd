@@ -22,6 +22,6 @@ jobs:
         context: ./src
         file: ./src/Dockerfile
         push: true
-        images: |
+        tags: |
           marcelopaglione/aula-primeira-pipeline:v${{ github.run_number }}
           marcelopaglione/aula-primeir-pipeline:latest
