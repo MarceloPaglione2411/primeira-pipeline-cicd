@@ -24,7 +24,7 @@ jobs:
         push: true
         tags: |
           marcelopaglione/aula-primeira-pipeline:v${{ github.run_number }}
-          marcelopaglione/aula-primeir-pipeline:latest
+          marcelopaglione/aula-primeir-pipeline:v2
   CD: 
     runs-on: ubuntu-latest
     needs: [CI]
